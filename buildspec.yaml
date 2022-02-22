@@ -8,9 +8,9 @@ phases:
     commands:
       - echo Build started on date
       - sam package
-        --template-file template.yaml
+        --template-file sam-sam-template.yaml
         --s3-bucket put-event-bucket
-        --output-template-file packaged-template.yaml
+        --output-template-file packaged-sam-sam-template.yaml
 
 artifacts:
   files:
