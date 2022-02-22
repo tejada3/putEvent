@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A simple AWS Lambda for updating a set
+Resources:
+  PutEventFx:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PutEventFx
+      Handler: app.put_lambda_handler
+      Runtime: python3.9
+      Description: Python function
+      MemorySize: 256
+      Timeout: 30
+      Tracing: Active
+      Policies:
+      - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+    Metadata:
+      SamResourceId: PutEventFx
