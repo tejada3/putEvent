@@ -8,10 +8,10 @@ phases:
     commands:
       - echo Build started on date
       - sam package
-        --template-file sam-sam-template.yaml
+        --template-file sam-template.yaml
         --s3-bucket put-event-bucket
-        --output-template-file packaged-sam-sam-template.yaml
+        --output-template-file packaged-sam-template.yaml
 
 artifacts:
   files:
-    template.yml
+    .aws-sam/build/PutEventFx/sam-template.yml
